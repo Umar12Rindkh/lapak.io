@@ -49,7 +49,6 @@ body{
 
 .dropdown{
     position: absolute;
-    display: flex;
     flex-direction: column;
     right: 8vw;
     top: 4rem;
