@@ -46,9 +46,8 @@ body{
     padding: 0 5px 0 5px;
 }
 
-.regist i:last-child{
-    color: #fff;
-    font-size: 1rem;
+.regist span::selection{
+    background-color:transparent;
 }
 
 .dropdown{
