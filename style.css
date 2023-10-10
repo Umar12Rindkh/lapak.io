@@ -59,12 +59,13 @@ body{
     z-index: 1;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #aaaaaa;
-    transform: translateX(-200%);
+    display: none;
 }
 
 .dropdown.fix{
-    transform: translateX(0);
+    display: flex;
 }
+
 
 .dropdown .dropbox1{
     margin-top: 0.2rem;
