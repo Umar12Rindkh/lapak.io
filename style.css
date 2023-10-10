@@ -32,7 +32,7 @@ body{
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+    user-select: none;
 }
 
 .regist i{
@@ -46,9 +46,6 @@ body{
     padding: 0 5px 0 5px;
 }
 
-.regist i, .regist span::selection{
-    background-color:transparent;
-}
 
 .dropdown{
     position: absolute;
