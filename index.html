@@ -8,8 +8,597 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #181e33;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    height: 5em;
+    align-items: center;
+}
+
+.dropdown-list{
+    display: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.header img{
+    height: 3rem;
+}
+
+.regist {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+.regist i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.regist span{
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 5px 0 5px;
+}
+
+
+
+.dropdown{
+    position: absolute;
+    flex-direction: column;
+    right: 8vw;
+    top: 4rem;
+    width: 12rem;
+    height: 5rem;
+    background-color: #ffffff;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+    display: none;
+}
+
+.dropdown.fix{
+    display: flex;
+}
+
+
+.dropdown .dropbox1{
+    margin-top: 0.2rem;
+    display: flex;
+    height: 2.3rem;
+    position: relative;
+    align-items: center;
+}
+.dropdown .dropbox2{
+    margin-bottom: 0.2rem;
+    display: flex;
+    height: 2.3rem;
+    position: relative;
+    align-items: center;
+}
+.dropdown a{
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.dropdown i{
+    padding-right: 0.5rem;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    height: 4rem;
+    background-color: #2a324e;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar ul{
+    position: relative;
+    margin-left: 8.3vw;
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    padding-right: 2rem;
+}
+.navbar ul li i{
+    padding-right: 0.5rem;
+}
+.navbar ul li a{
+    text-decoration: none;
+    
+    color: #e0d2d2;
+}
+
+.page{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    height: 100%;
+    top: 2rem;
+}
+
+.pamflate {
+    border-radius: 30px;
+}
+
+.page .icon {
+    height: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #2a324e;
+    padding-top: 1rem;
+}
+.page .icon .box{
+    width: 10rem;
+    height: 5rem;
+    position: relative;
+    cursor: pointer;
+}
+.page .icon a{
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    color: #e0d2d2;
+    text-decoration: none;
+}
+
+.page .icon i{
+    font-size: 1.7rem;
+    padding: 0.5rem;
+}
+
+.page .icon .box:active, .page .icon .box:focus{
+    border-bottom: 3px solid rgb(26, 87, 179);
+}
+
+.page .icon a:active, .page .icon a:focus{
+    color: rgb(26, 87, 179);
+}
+
+.cari{
+    display: flex;
+    position: relative;
+    top: 0.5rem;
+    background-color: #fff;
+    width: 32%;
+    height: 2.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.cari form input{
+    height: 2.5rem;
+    padding-left: 1rem;
+    width: 22vw;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+.cari form button{
+    height: 2.6rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #665c5c;
+    background-color: transparent;
+    border:none;
+    border-left: 1.5px solid #181e33;  
+}
+
+.titleig{
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 2rem;
+}
+
+.titleig span{
+    height: 8px;
+    width: 30px;
+    background-color: rgb(7, 85, 230);
+    margin-right: 1rem;
+    border-radius: 3px ;
+}
+
+.titleig p{
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight:500;
+}
+
+
+.iconig{
+    position: relative;
+    top: 3rem;
+    display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.iconig .box{
+    text-align: center;
+    width: 40vh;
+}
+
+.iconig .box img{
+    width: 11rem;
+    position: relative;
+    z-index: 0;
+}
+
+.iconig .box img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    z-index: 1;
+}
+.iconig .lancar{
+    display:inline-flex;
+    position: relative;
+    background-color: #53ca4f;
+    padding: 5px 12px;
+    top:-2.5rem;
+    left: -4rem;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.iconig h4{
+    color: #fff;
+    position: relative;
+    top: -1rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.iconig h4:nth-child(4){
+    color: #e0d2d2;
+}
+
+.iconig span{
+    position: relative;
+    padding: 5px 20px;
+    background-color: #054cb6;
+    border-radius: 20px;
+    top: -0.5rem;
+    font-weight: 800;
+}
+
+.iconig span a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    position: relative;
+    height: auto;
+    background-color: #171f3f;
+    top: 6rem;
+}
+
+.container .page {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .page a{
+    text-decoration: none;
+    color: #fff;
+}
+.container .page a:hover{
+    text-decoration: underline;
+}
+
+.desk-box{
+    width: 40%;
+}
+.desk-box img{
+    width: 12rem;
+}
+.desk-box h5{
+    font-weight: 100;
+    color: #fff;
+    line-height: 3;
+}
+.sosmed img{
+    width: 2rem;
+    height: auto;
+}
+
+.desk-box2{
+    width: 35%;
+    position: relative;
+    left: 2rem;
+}
+.desk-box2 span{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.desk-box2 p{
+    line-height: 2.5;
+}
+
+
+.desk-box3{
+    width: 35%;
+}
+.desk-box3 span{
+    font-size: 2rem;
+    color: #fff;
+}
+.desk-box3 p{
+    line-height: 2.5;
+}
+.desk-box3 .pay img{
+    width: 6rem;
+    margin:0.7rem 2rem 1.3rem 0 ;
+
+    padding: 0.2rem 0.3rem;
+}
+
+footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: #171f3f;
+    border-top: 0.5px solid #645f5f;
+}   
+
+footer p{
+    color: #ece3e3;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:1020px) {
+    .page{
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+
+    .header img{
+        height: 2.5rem;
+    }
+
+    .navbar {
+        display: none;
+    }  
+    .dropdown-list{
+        display: flex;
+        
+    }
+    .regist i{
+        padding-right: 10px;
+    }
+    .regist span{
+        display: none;
+    }
+
+    .page {
+        top: 0px;
+    }
+    .iconig .box{
+        text-align: center;
+        width:14rem;
+    }
+    .container{
+        position: relative;
+        height: auto;
+        background-color: #171f3f;
+        top: 2rem;
+    }
+
+    
+}
+
+@media screen and (max-width:768px){
+    .container{
+        position: relative;
+        height: 135vh;
+        background-color: #171f3f;
+        top: 2.8rem;
+    }
+    .iconig .box{
+        text-align: center;
+        width:10rem;
+    }
+    .container .page {
+        top: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .desk-box{
+        width: 100%;
+    }
+
+    .desk-box img{
+        width: 10rem;
+    }
+    .desk-box h5{
+        color: #fff;
+        font-weight: 100;
+        line-height: 2;
+    }
+    .sosmed img{
+        width: 1.7rem;
+        height: auto;
+    }
+    
+    .desk-box2{
+        width: 100%;
+        position: relative;
+        left:0;
+        top: 2rem;
+    }
+    .desk-box2 span{
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .desk-box2 p{
+        color: #fff;
+        line-height: 2;
+        font-size: 0.9rem;
+    }   
+    .desk-box3{
+        width: 100%;
+        position: relative;
+        top: 4rem;
+    }
+    .desk-box3 span{
+        font-size: 1.6rem;
+        font-weight: 600;        
+        color: #fff;
+    }
+    .desk-box3 p{
+        color: #fff;
+        line-height: 2;
+        font-size: 0.9rem;
+    }
+    .desk-box3 .pay img{
+        width: 4rem;
+        margin:0.6rem 1.5rem 0.9rem 0;
+        padding: 0.2rem 0.3rem;
+        background-color: #fff;
+    }  
+    footer p{
+        color: #ece3e3;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:578px) {
+    .page{
+        top: 0px;
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+    
+    .page img {
+        border-radius: 30px;
+    }
+    
+    .page .icon {
+        height: 5rem;
+        padding-top: 1rem;
+    }
+    .page .icon .box{
+        width: 10rem;
+        height: 5rem;
+        position: relative;
+        
+        cursor: pointer;
+    }
+    .page .icon a{
+        font-size: .7rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        color: #e0d2d2;
+        text-decoration: none;
+    }
+    
+    .page .icon i{
+        font-size: 1.7rem;
+        padding: 0.5rem;
+    }
+    .titleig{
+        display: flex;
+        position: relative;
+        align-items: center;
+        top: 1.5rem;
+    }
+    
+    .titleig span{
+        height: 7px;
+        width: 28px;
+        margin-right: 1rem;
+        border-radius: 3px ;
+    }
+    .titleig p{
+        font-size: 1rem;
+        font-weight:500;
+    }   
+
+    .iconig .box{
+        text-align: center;
+        width: 9rem;
+    }
+
+    .iconig .box img{
+        width: 8rem;
+        position: relative;
+        z-index: 0;
+    }
+
+    .iconig .lancar{
+        padding: 3px 10px;
+        top:-2.5rem;
+        left: -1rem;
+        border-radius: 30px;
+        color: #fff;
+    }
+    
+    .iconig h4{
+        top: -1rem;
+        font-size: 0.6rem;
+        padding-bottom: 0.5rem;
+    }
+    
+
+    .iconig span{
+        position: relative;
+        padding: 3px 15px;
+        background-color: #054cb6;
+        border-radius: 15px;
+        top: -0.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+    .container{
+        position: relative;
+        height: 140vh;
+        background-color: #171f3f;
+        top: 2.8rem;
+    }
+
+}
+  </style>
   <body>
     <div class="header">
       <div class="dropdown-list"><i class="fas fa-bars"></i></div>
