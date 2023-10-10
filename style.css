@@ -63,7 +63,7 @@ body{
     z-index: 1;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #aaaaaa;
-    transform: translateX(300%);
+    transform: translateX(-200%);
 }
 
 .dropdown.fix{
