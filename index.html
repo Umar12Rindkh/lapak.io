@@ -18,6 +18,7 @@
 
 body{
     background-color: #181e33;
+    overflow-x: hidden;
 }
 
 .header{
@@ -148,9 +149,7 @@ body{
 
 .page .icon {
     height: 5rem;
-    position: relative;
     display: flex;
-    align-items: center;
     background-color: #2a324e;
     padding-top: 1rem;
 }
@@ -425,6 +424,39 @@ footer p{
 }
 
 @media screen and (max-width:768px){
+    .page{
+        top: 0px;
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+    
+    .page img {
+        border-radius: 30px;
+    }
+    
+    .page .icon {
+        height: 6rem;
+        display: flex;
+        background-color: #2a324e;
+        padding-top: 1rem;
+        overflow: auto;
+        overflow-y: hidden;
+    }
+
+    .page .icon a{
+        font-size: .8rem;
+        display: inline-block;
+        padding: 0 14px;
+        text-align: center;
+        color: #e0d2d2;
+        text-decoration: none;
+    }
+    
+    .page .icon i{
+        font-size: 1.7rem;
+        padding: 0.5rem;
+    }
+    
     .container{
         position: relative;
         height: 135vh;
@@ -502,41 +534,7 @@ footer p{
 }
 
 @media screen and (max-width:578px) {
-    .page{
-        top: 0px;
-        margin-left: 2vh;
-        margin-right: 2vh;
-    }
     
-    .page img {
-        border-radius: 30px;
-    }
-    
-    .page .icon {
-        height: 5rem;
-        padding-top: 1rem;
-    }
-    .page .icon .box{
-        width: 10rem;
-        height: 5rem;
-        position: relative;
-        
-        cursor: pointer;
-    }
-    .page .icon a{
-        font-size: .7rem;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        text-align: center;
-        color: #e0d2d2;
-        text-decoration: none;
-    }
-    
-    .page .icon i{
-        font-size: 1.7rem;
-        padding: 0.5rem;
-    }
     .titleig{
         display: flex;
         position: relative;
@@ -592,7 +590,7 @@ footer p{
     }
     .container{
         position: relative;
-        height: 110vh;
+        height: 125vh;
         background-color: #171f3f;
         top: 2.8rem;
     }
