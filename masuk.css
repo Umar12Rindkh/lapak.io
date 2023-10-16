@@ -1,55 +1,141 @@
-
-
-
-.form .cek{
+.page-masuk {
     position: relative;
     display: flex;
-    flex-direction: row;
-    background-color: floralwhite;
-    height: 1.3rem;
-    width:1.3rem;
-    top: 2rem;
-    align-items: center;
-    border-radius: 5px;
-    justify-content: center;
-    user-select: none;
+    flex-direction: column;
+    margin-top: 5rem;
+    background-color: #2a324e;
+    height: 52vh;
+}
 
+.page-masuk form{
+    margin: 2vh 3vh;
+
+}
+
+
+.input-grup {
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+    height: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.input-grup input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    margin-left: 1vw;
+    border: none;
+    background-color: transparent;   
+}
+.input-grup label{
+    position: absolute ;
+    margin-left: 1vw;
+    font-size: 0.8rem;
+    pointer-events: none;
+
+}
+
+
+input:focus ~ label,
+input:valid ~ label{
+    transform: translateY(-30px);
+    color: #ffffff;
+    transition: all 0.6s;
+}
+
+.cek{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.cek span{
+    width: 15px ;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cek i{
     position: absolute;
-    display: flex;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    color: #fff;    
-    font-weight:bold;
-    opacity: 0;
-    padding: 0.3rem;
-    background-color: #3283cf;
-    transition: all 0.3s;
-    border: 1px solid #fff;
-    opacity: 0;
-
-}
-.cek input:checked ~ i{
-    opacity: 1;
+    margin-left: 2.8px;
+    color: #ffffff;
+    font-size: 0.7rem;
 }
 
 
 .cek input{
     position: absolute;
-    top: -px;
-    height: 1.4rem;
-    width:1.4rem;
-    background-color: transparent;
+    width: 7vw ;
+    height: 15px;
+    outline: none;
+    border: none;
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
-.text{
-    position: fixed;
-    flex-direction: row;
-    color: #fff;
-    font-weight: 700;
-    left: 0;
+.cek input:checked ~ span{
+    background-color: rgb(60, 165, 165);
+    transition: all 0.3s;
+}
+
+.cek h4{
+    color: #dad2d2;
+    font-weight: 100;
+    font-size: 0.8rem;
+    user-select: none;
+    
+}
+
+.daftar {
+    display: flex;
+}
+
+.daftar p{
+    color: #dad2d2;
+    margin-right: 5px;
+}
+
+.daftar a{
+    text-decoration: none;
+    color: #238ed6;
+}
+
+.daftar a:hover{
+    color: #a4c7df;
+    text-decoration: underline;
+    transition: all 0.7s;
+}
+
+
+.btn-regis{
+    margin-top: 2rem;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-regis input{
+    width: 80px;
+    height: 50px;
+    color: #fff;;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px white;
+}
+
+.btn-regis input:focus{
+    background-color: #238ed6;
+    box-shadow: none;
 }
