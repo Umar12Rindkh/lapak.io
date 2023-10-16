@@ -9,7 +9,7 @@ body{
     overflow-x: hidden;
 }
 body.fix {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -109,7 +109,7 @@ body.fix {
     height: 5rem;
     background-color: #ffffff;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px #aaaaaa;
     display: none;
 }
@@ -133,6 +133,18 @@ body.fix {
     position: relative;
     align-items: center;
 }
+
+
+.dropbox1:hover{
+    background-color: #eaedf1;
+    border-radius: 5px;
+}
+
+.dropbox2:hover{
+    background-color: #eaedf1;
+    border-radius: 5px;
+}
+
 .dropdown a{
     position: relative;
     padding-left: 1.5rem;
