@@ -551,12 +551,15 @@ footer p{
     }
 
     .iconig{
-        height: 90vw;
+        height: 100vw;
     }
     .iconig .box{
         height: 3rem;
         text-align: center;
-        width:9rem;
+        width:25vw;
+    }
+    .iconig .box img{
+        width: 25vw;
     }
     .container .page {
         top: 1rem;
