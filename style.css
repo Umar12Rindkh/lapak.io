@@ -640,7 +640,7 @@ footer p{
     }   
 
     .iconig{
-        height: 100vw;
+        height: 65vh;
     }
     .iconig .box{
         height: 3rem;
@@ -649,7 +649,7 @@ footer p{
     }
 
     .iconig .box img{
-        width: 25vw;
+        width: 6rem;
         }
 
     .iconig .lancar{
