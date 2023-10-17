@@ -638,16 +638,18 @@ footer p{
         font-weight:500;
     }   
 
-
+    .iconig{
+        height: 70vh;
+    }
 
     .iconig .box{
-        height: 1.8rem;
+        height: 3rem;
         text-align: center;
         width: 7rem;
     }
 
     .iconig .box img{
-        width: 7rem;
+        width: 6rem;
         }
 
     .iconig .lancar{
