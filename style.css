@@ -292,14 +292,13 @@ body.fix {
     top: 3rem;
     display:flex;
     flex-wrap: wrap;
-    height: auto;
+    height: 100vh;
     justify-content: space-between;
 }
 
 .iconig .box{
     text-align: center;
     width: 40vh;
-    margin-top: 40px;
 }
 
 .iconig .box img{
@@ -516,7 +515,8 @@ footer p{
         margin-left: 2vh;
         margin-right: 2vh;
     }
-        
+    
+    
     .page .icon {
         height: 5rem;
         display: flex;
@@ -639,6 +639,9 @@ footer p{
         font-weight:500;
     }   
 
+    .iconig{
+        height: 100vw;
+    }
     .iconig .box{
         height: 3rem;
         text-align: center;
@@ -646,7 +649,7 @@ footer p{
     }
 
     .iconig .box img{
-        width: 6rem;
+        width: 25vw;
         }
 
     .iconig .lancar{
