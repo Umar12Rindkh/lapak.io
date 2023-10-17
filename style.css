@@ -549,9 +549,14 @@ footer p{
         background-color: #171f3f;
         top: 2.8rem;
     }
+
+    .iconig{
+        height: 80vw;
+    }
     .iconig .box{
+        height: 3rem;
         text-align: center;
-        width:10rem;
+        width:9rem;
     }
     .container .page {
         top: 1rem;
