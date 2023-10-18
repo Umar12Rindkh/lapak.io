@@ -516,10 +516,6 @@ footer p{
         margin-right: 2vh;
     }
     
-    .page img {
-        border-radius: 30px;
-    }
-    
     .page .icon {
         height: 5rem;
         display: flex;
