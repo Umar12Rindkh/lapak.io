@@ -520,8 +520,7 @@ footer p{
         height: 5rem;
         display: flex;
         background-color: #2a324e;
-        overflow: auto;
-        overflow-y: hidden;
+        
     }
 
     .page .icon a{
