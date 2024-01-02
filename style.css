@@ -516,11 +516,16 @@ footer p{
         margin-right: 2vh;
     }
     
+    .page img {
+        border-radius: 30px;
+    }
+    
     .page .icon {
         height: 5rem;
         display: flex;
         background-color: #2a324e;
-        
+        overflow: auto;
+        overflow-y: hidden;
     }
 
     .page .icon a{
@@ -546,7 +551,7 @@ footer p{
     }
 
     .iconig{
-        height: 60vh;
+        height: 100vw;
     }
     .iconig .box{
         height: 3rem;
@@ -645,7 +650,7 @@ footer p{
         font-weight:500;
     }   
     .iconig{
-        height: 60vh;
+        height: 100vw;
     }
     .iconig .box{
         height: 3rem;
