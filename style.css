@@ -629,7 +629,7 @@ footer p{
 
 @media screen and (max-width:578px) {
     .page .icon {
-        height: 10rem;
+        height: 4rem;
     }
 
     .title{
@@ -650,7 +650,7 @@ footer p{
         font-weight:500;
     }   
     .iconig{
-        height: 100vw;
+        height: 110vw;
     }
     .iconig .box{
         height: 3rem;
