@@ -629,7 +629,7 @@ footer p{
 
 @media screen and (max-width:578px) {
     .page .icon {
-        height: 4rem;
+        height: 10rem;
     }
 
     .title{
